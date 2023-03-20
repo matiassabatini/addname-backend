@@ -1,10 +1,16 @@
 package com.addname.demo.modelo;
 
+
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "nombres")
 public class Nombre {
+    public Nombre() {
+    }
+
 
     @Id
     @GeneratedValue(strategy =GenerationType.IDENTITY)
@@ -29,9 +35,6 @@ public class Nombre {
         this.nombre = nombre;
     }
 
-    public Nombre(Long id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
-    }
+
 }
 
